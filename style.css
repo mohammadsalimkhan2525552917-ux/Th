@@ -1,0 +1,99 @@
+:root {
+  --pink: #ff4f9a;
+  --orange: #ff9f1c;
+  --yellow: #ffd60a;
+  --teal: #2ec4b6;
+  --purple: #7b5cff;
+  --ink: #2b2140;
+  --cream: #fff8ef;
+  --card: #ffffff;
+  --radius: 22px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  background-image:
+    radial-gradient(circle at 10% 20%, #ffd60a33 0, transparent 30%),
+    radial-gradient(circle at 90% 10%, #ff4f9a33 0, transparent 30%),
+    radial-gradient(circle at 80% 90%, #2ec4b633 0, transparent 35%);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+header.site {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px; padding: 18px 6vw;
+}
+.logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: var(--ink); }
+.logo span { background: linear-gradient(90deg, var(--pink), var(--orange)); -webkit-background-clip: text; color: transparent; }
+nav a {
+  margin-left: 14px; text-decoration: none; color: var(--ink); font-weight: 700;
+  padding: 6px 12px; border-radius: 999px; transition: transform .15s;
+}
+nav a:hover, nav a.active { background: var(--yellow); transform: translateY(-2px); }
+main { max-width: 900px; margin: 0 auto; padding: 20px 6vw 60px; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin-bottom: 14px; }
+h2 { font-size: 1.6rem; margin: 28px 0 10px; }
+p { margin-bottom: 12px; }
+.hero-badge {
+  display: inline-block; background: var(--teal); color: #fff; font-weight: 700;
+  padding: 6px 14px; border-radius: 999px; margin-bottom: 14px; transform: rotate(-2deg);
+}
+.card {
+  background: var(--card); border-radius: var(--radius); padding: 26px;
+  box-shadow: 0 10px 0 #2b214022, 0 14px 30px #2b21401a; margin-top: 18px;
+}
+.input-row { display: flex; gap: 10px; flex-wrap: wrap; }
+input[type="text"], input[type="url"] {
+  flex: 1 1 320px; padding: 16px 18px; font-size: 1rem; border-radius: 16px;
+  border: 3px solid var(--purple); font-family: inherit; outline: none;
+}
+input:focus { box-shadow: 0 0 0 4px var(--yellow); }
+button, .btn {
+  background: linear-gradient(90deg, var(--pink), var(--orange));
+  color: #fff; border: none; border-radius: 16px; padding: 16px 24px;
+  font-size: 1rem; font-weight: 800; cursor: pointer; font-family: inherit;
+  box-shadow: 0 6px 0 #c2185b55; transition: transform .1s, box-shadow .1s;
+  text-decoration: none; display: inline-block;
+}
+button:hover, .btn:hover { transform: translateY(-2px); }
+button:active { transform: translateY(4px); box-shadow: 0 2px 0 #c2185b55; }
+button:disabled { opacity: .6; cursor: not-allowed; }
+.platforms { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.chip {
+  background: #f1ecff; color: var(--purple); font-weight: 700;
+  padding: 6px 12px; border-radius: 999px; font-size: .9rem;
+}
+.message { margin-top: 14px; font-weight: 700; min-height: 1.4em; }
+.message.error { color: #d6336c; }
+.message.ok { color: var(--teal); }
+.result { display: none; margin-top: 22px; text-align: center; }
+.result.show { display: block; }
+.result img {
+  max-width: 100%; border-radius: 18px; border: 5px solid var(--yellow);
+  box-shadow: 0 10px 25px #2b214033;
+}
+.result .btns { margin-top: 16px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.btn-alt { background: linear-gradient(90deg, var(--teal), var(--purple)); box-shadow: 0 6px 0 #1f7a70; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 18px; }
+.step { background: var(--card); border-radius: var(--radius); padding: 22px; box-shadow: 0 8px 0 #2b214022; }
+.step .num {
+  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  color: #fff; font-weight: 800; font-size: 1.2rem; margin-bottom: 10px;
+}
+.n1 { background: var(--pink); } .n2 { background: var(--orange); } .n3 { background: var(--teal); }
+details { background: var(--card); border-radius: 16px; padding: 16px 20px; margin-top: 12px; box-shadow: 0 6px 0 #2b214018; }
+summary { font-weight: 800; cursor: pointer; font-size: 1.05rem; }
+details p { margin-top: 10px; }
+form.contact { display: grid; gap: 12px; margin-top: 16px; }
+form.contact input, form.contact textarea {
+  padding: 14px; border-radius: 14px; border: 3px solid var(--teal); font-family: inherit; font-size: 1rem;
+}
+form.contact textarea { min-height: 130px; resize: vertical; }
+footer { text-align: center; padding: 30px; font-weight: 700; color: var(--ink); opacity: .7; }
+@media (max-width: 600px) {
+  header.site { justify-content: center; text-align: center; }
+  nav a { margin: 4px; }
+  .card { padding: 18px; }
+}
