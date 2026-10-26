@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ThumbGrab – Thumbnail Downloader · ThumbGrab</title>
+<meta name="description" content="Download YouTube, Vimeo and Dailymotion thumbnails in full HD for free.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site"><a class="logo" href="index.html">Thumb<span>Grab</span></a><nav><a href="index.html" class="active">Home</a><a href="how-to.html" NAV_HOW>How to</a><a href="about.html" NAV_ABOUT>About</a><a href="contact.html" NAV_CONTACT>Contact</a></nav></header>
+<main>
+  <span class="hero-badge">Free & fast 🚀</span>
+  <h1>Grab any video thumbnail in seconds!</h1>
+  <p>Paste a link from YouTube, Vimeo or Dailymotion and download the cover image in full quality.</p>
+  <div class="card">
+    <form id="dl-form">
+      <div class="input-row">
+        <input type="url" id="video-url" placeholder="Paste a video link here..." required>
+        <button type="submit" id="dl-btn">Get Thumbnail</button>
+      </div>
+    </form>
+    <div class="platforms">
+      <span class="chip">▶ YouTube</span><span class="chip">🎬 Vimeo</span><span class="chip">📺 Dailymotion</span>
+    </div>
+    <div id="message" class="message"></div>
+    <div id="result" class="result">
+      <img id="preview" alt="Video thumbnail preview">
+      <div class="btns">
+        <button id="save-btn" type="button">⬇ Download</button>
+        <button id="open-btn" type="button" class="btn-alt">Open full size</button>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>Made with 🧡 · © <span data-year></span> ThumbGrab</footer><script src="script.js"></script></body></html>
